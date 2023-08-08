@@ -2,29 +2,35 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 body{
     background-color: #f0f0f0;
+    background-image: url(../images/wallpaper2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 h1{
-    color: #d30000;
+    color: #ffffff;
     text-align: center;
 }
 main{
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 
 }
 #postForm{
-    
+    border: 40px solid #138deb;
     max-width: 500px;
     width: 100%;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #Fff;
+    
+    border-radius: 13px;
+    background-color: #d4eeff9f;
 }
 label, input, textarea {
     display: block;
@@ -32,20 +38,25 @@ label, input, textarea {
     width: 100%;
     box-sizing: border-box;
     max-width: 500px;
+    border-radius: 10px;
+    border: none;
 }
 textarea{
     resize: none;
+    border: none;
 }
 button{
-    background-color: #d30000;
+    background-color: #1192ef;
     color: #Fff;
     cursor: pointer;
+    border: none;
+    height: 100%;
     width: 100%;
     padding: 0.25rem;
     border-radius: 8px;
 }
 button:hover{
-    background-color: #a00000;
+    background-color: #138deb;
     transition: 0.3s;
 
 }
@@ -56,11 +67,11 @@ button:hover{
     margin-bottom: 10px;
 }
 .itemPost h2{
-    color: #a00000;
+    color: #138deb;
     margin-bottom: 5px;
 }
 .itemPost button{
-    background-color: #d30000;
+    background-color: #1192ef;
     color: #Fff;
     cursor: pointer;
     border: none;
@@ -79,7 +90,7 @@ button:hover{
     background-color: #Fff;
 }
 .itemPost button:hover{
-    background-color: #a00000;
+    background-color: #138deb;
     transition: 0.3s;
 }
 .hidden {
