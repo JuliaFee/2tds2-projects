@@ -18,10 +18,34 @@ main{
 
 }
 #postForm{
+    
     max-width: 500px;
     width: 100%;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: #Fff;
+}
+label, input, textarea {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 500px;
+}
+textarea{
+    resize: none;
+}
+button{
+    background-color: #d30000;
+    color: #Fff;
+    cursor: pointer;
+    width: 100%;
+    padding: 0.25rem;
+    border-radius: 8px;
+}
+button:hover{
+    background-color: #a00000;
+    transition: 0.3s;
+    
 }
