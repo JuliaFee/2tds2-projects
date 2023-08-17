@@ -1,30 +1,39 @@
-// categoria possui varios produtos
-class Category {
-    constructor (id, name){
-        this.name = name;
+// Categoria possui vários produtos => 1:N
+class Category{
+    constructor(id, name){
         this.id = id;
+        this.name = name;
         this.products = [];
     }
 }
 
-class Product{
-    constructor(id, name, price){
+// Produto pertence a uma categoria => 1:1
+class Product {
+    constructor(id, name, price, category){
         this.id = id;
         this.name = name;
         this.price = price;
-        this.category = category;
+        this.category = category
     }
 }
 
-class CategoryService{
+class CategoryService {
     constructor(){
         this.categories = [];
         this.nextCategoryId = 0;
     }
-
-    AddCategory(name){
+    addCategory(name){
         const id = this.nextCategoryId++;
         const category = new Category(id, name);
         this.categories.push(category);
     }
 }
+
+const categoryList = new CategoryService();
+
+function createCategory() {
+   const categoryName = "Doce"; 
+   categoryList.addCategory(categoryName);
+    console.log(categoryList.categories);
+}
+
