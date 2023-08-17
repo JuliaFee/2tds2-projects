@@ -50,6 +50,8 @@ function createCategory() {
    categoryList.addCategory(categoryName);
      console.log(categoryList.categories);
     // console.log(categoryName);
+    clearFormFields();
+    displayCategoriesAndProducts();
 }
 
 function createProduct(){
@@ -67,4 +69,38 @@ function clearFormFields(){
     document.getElementById("productName").value = "";
     document.getElementById("productCategory").value = "";
     document.getElementById("productPrice").value = "";
+}
+
+function displayCategoriesAndProducts(){
+    let content = "";
+
+    categoryList.categories.forEach(category => {
+         content += `
+         <li>
+         <div class="categoriesList">
+         <span><b>Categoria:</b>${category.name}</span>
+         <div>
+         <button class="editButton">Editar</button>
+         <button class="deleteButton">Remover</button>
+         </div>
+         </div>
+         <ul class="productsListByCategory">`
+         category.products.forEach(products =>{
+            content = ` <li>
+            <div class="productsList">
+            <span><b>Produto:</b>${product.name} - <b>Preço: ${product.price}</b></span>
+            <div>
+            <button class="editButton">Editar</button>
+            <button class="deleteButton">Remover</button>
+            </div>
+            </div>
+           `;
+        });
+        content += `
+        </ul>
+        </li>
+        `;
+    });
+    document.getElementById("categoriesList").innerHTML = content;
+
 }
